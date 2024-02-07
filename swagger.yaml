@@ -1790,6 +1790,24 @@ paths:
                                   - /devices/169.254.10.1/events/data
                                 subscribeTopic: []
                               type: mqtt
+              set_config_data_tcp_ip:
+                value:
+                  READER-GATEWAY:
+                    endpointConfig:
+                      data:
+                        event:
+                          connections:
+                            - additionalOptions:
+                                retention:
+                                  maxEventRetentionTimeInMin: 500
+                                  maxNumEvents: 150000
+                                  throttle: 100
+                              description: tag_data_tcp_ip_conn
+                              name: tag_data_tcp_ip
+                              options:
+                                enableSecurity: false
+                                tcpipport: '8081'
+                              type: tcpip-server
               set_config_httpPost:
                 value:
                   READER-GATEWAY:
